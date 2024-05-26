@@ -1,22 +1,47 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import loginBG from "../../assets/Login-bg.jpg"
 import { FaGoogle } from "react-icons/fa6";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
+import { FaGithub } from "react-icons/fa";
 
 const Registration = () => {
+    const { user, createUser, githubLogin } = useContext(AuthContext);
     const [passMatch, setPassMatch] = useState(true);
 
     const handleRegistration = e => {
         e.preventDefault();
-
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         const confirmPassword = form.confirmPassword.value;
         if (password !== confirmPassword) {
             setPassMatch(false)
+            console.log(password.value);
+        }
+
+        else {
+            createUser(email, password)
+                .then((userCredential) => {
+                    console.log(userCredential.user);
+                })
+                .catch(err => {
+                    console.log(err.message);
+                })
         }
         console.log(email, password, confirmPassword);
     }
+
+    const handleGithubSignIn = () => {
+        githubLogin()
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(err => {
+            console.log(err.message);
+        })
+    }
+
     return (
         <div className="relative w-full h-[700px]">
             <img className="absolute inset-0 w-full h-full object-cover" src={loginBG} alt="Background" />
@@ -35,6 +60,11 @@ const Registration = () => {
                     <button className='btn w-full flex items-center justify-center space-x-2'>
                         <FaGoogle />
                         <span>Login with Google</span>
+                    </button>
+
+                    <button onClick={handleGithubSignIn} className='btn w-full  flex items-center justify-center space-x-2'>
+                        <FaGithub />
+                        <span>Login with Github</span>
                     </button>
                 </form>
             </div>

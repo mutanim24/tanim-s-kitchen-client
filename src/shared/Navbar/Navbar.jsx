@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+    }
+
     const menu = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/about'}>About</Link></li>
-        <li><Link to={'/login'}>Login</Link></li>
-        <li><Link to={'/registration'}>Registration</Link></li>
+        {/* <li><Link to={'/login'}>Login</Link></li>
+        <li><Link to={'/registration'}>Registration</Link></li> */}
+        <li><Link to={'/dashboard'}>Dashboard</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -16,18 +25,31 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                       {menu}
+                        {menu}
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">TANIM's KITCHEN</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                   {menu}
+                    {menu}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {/* <a className="btn">Button</a> */}
+                {user ? <div className='flex gap-4'>
+                    <div className="avatar">
+                        <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src={user.photoURL} />
+                        </div>
+                    </div>
+                    <button onClick={handleSignOut} className='btn btn-outline btn-primary'>Sign Out</button>
+                </div> :
+                <div className='flex gap-4'>
+                    <Link to={'/login'} className="btn btn-primary">Login</Link>
+                    <Link to={'/registration'} className="btn btn-primary">Sign Up</Link>
+                </div>
+                }
             </div>
         </div>
     );
