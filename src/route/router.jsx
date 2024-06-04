@@ -17,7 +17,7 @@ import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
         {
             path: "/",
             element: <Home></Home>,
-            // loader: () => fetch("http://localhost:3000/shoes")
+            // loader: () => fetch("https://tanim-s-kitchen-server.vercel.app/shoes")
         },
         {
             path: "/about",
@@ -26,7 +26,7 @@ import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
         {
           path: 'recipe/:id',
           element: <SingleRecipePage></SingleRecipePage>,
-          loader: ({params}) => fetch(`http://localhost:3000/recipe/${params.id}`)
+          loader: ({params}) => fetch(`https://tanim-s-kitchen-server.vercel.app/recipe/${params.id}`)
         },
         {
           path: '/login',
