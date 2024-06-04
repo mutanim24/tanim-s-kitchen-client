@@ -1,9 +1,12 @@
 import React from 'react';
+import PageBanner from './PageBanner/PageBanner';
+import WhoWeAre from './WhoWeAre/WhoWeAre';
 
 const About = () => {
     return (
         <div>
-            This ius about page
+            <PageBanner></PageBanner>
+            <WhoWeAre></WhoWeAre>
         </div>
     );
 };
