@@ -43,11 +43,11 @@ const Navbar = () => {
                             <img src={user.photoURL} />
                         </div>
                     </div>
-                    <button onClick={handleSignOut} className='btn btn-outline btn-primary'>Sign Out</button>
+                    <button onClick={handleSignOut} className='btn btn-outline btn-primary text-white font-semibold'>Sign Out</button>
                 </div> :
                 <div className='flex gap-4'>
-                    <Link to={'/login'} className="btn btn-primary">Login</Link>
-                    <Link to={'/registration'} className="btn btn-primary">Sign Up</Link>
+                    <Link to={'/login'} className="btn btn-primary text-white font-semibold">Login</Link>
+                    <Link to={'/registration'} className="btn btn-primary text-white font-semibold">Sign Up</Link>
                 </div>
                 }
             </div>

@@ -7,6 +7,7 @@ import Registration from "../pages/Registration/Registration";
 import Dashboard from "../Dashboard/Dashboard";
 import DashboardLayout from "../MainLayout/DashboardLayout";
 import PrivateRoute from "./PrivateRoute";
+import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
 
  const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: "/about",
             element: <About></About>
+        },
+        {
+          path: 'recipe/:id',
+          element: <SingleRecipePage></SingleRecipePage>,
+          loader: ({params}) => fetch(`http://localhost:3000/recipe/${params.id}`)
         },
         {
           path: '/login',
