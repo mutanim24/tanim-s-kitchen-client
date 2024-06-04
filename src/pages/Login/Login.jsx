@@ -6,12 +6,15 @@ import { GiH2O } from 'react-icons/gi';
 import { getAuth, signOut } from 'firebase/auth';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FaGithub } from "react-icons/fa";
+import { useLocation, useNavigate } from 'react-router-dom';
 
-
-const auth = getAuth();
 
 const Login = () => {
     const {googleLogin, githubLogin, signInUser,  user} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
 
     // const {googleLogin} = useAuth();
     // const [loginUser, setLoginUser] = useState(null)
@@ -20,6 +23,7 @@ const Login = () => {
         googleLogin()
         .then(result => {
             console.log(result.user);
+            navigate(from)
             // setLoginUser(result.user.displayName)
         })
         .catch(err => {
@@ -31,6 +35,7 @@ const Login = () => {
         githubLogin()
         .then(result => {
             console.log(result.user);
+            navigate(from)
         })
         .catch(err => {
             console.log(err.message);
@@ -49,6 +54,7 @@ const Login = () => {
         signInUser(email, password)
         .then((userCredential) => {
             console.log(userCredential.user);
+            navigate(from)
         })
         .catch(err => {
             console.log(err.message);
@@ -63,7 +69,7 @@ const Login = () => {
                 <h1 className='text-5xl font-bold'>LOGIN</h1>
                 <input name='email' type="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs" />
                 <input name='password' type="password" placeholder="Password" className="input input-bordered w-full max-w-xs" />
-                <button className='btn btn-primary w-full max-w-xs'>Login</button>
+                <button className='btn btn-primary w-full max-w-xs'>LOG IN</button>
                 <button onClick={handleGoogleSignIn} className='btn w-full max-w-xs flex items-center justify-center space-x-2'>
                     <FaGoogle />
                     <span>Login with Google</span>

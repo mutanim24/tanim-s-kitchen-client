@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Spaghetti Carbonara",
+        "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+        "price": 12.99,
+        "rating": 4.5,
+        "ingredients": [
+            "spaghetti",
+            "eggs",
+            "Parmesan cheese",
+            "pancetta",
+            "black pepper",
+            "salt"
+        ]
+    },
+    {
+        "id": 2,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Chicken Tikka Masala",
+        "description": "A popular Indian curry dish made with roasted marinated chicken chunks in a spiced curry sauce.",
+        "price": 15.99,
+        "rating": 4.7,
+        "ingredients": [
+            "chicken breast",
+            "yogurt",
+            "onions",
+            "tomatoes",
+            "garlic",
+            "ginger",
+            "garam masala",
+            "cumin",
+            "coriander",
+            "turmeric",
+            "chili powder",
+            "cream",
+            "cilantro"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Beef Bourguignon",
+        "description": "A rich and hearty French stew made with beef braised in red wine, along with garlic, onions, and mushrooms.",
+        "price": 18.99,
+        "rating": 4.8,
+        "ingredients": [
+            "beef chuck",
+            "red wine",
+            "beef broth",
+            "carrots",
+            "onions",
+            "garlic",
+            "mushrooms",
+            "bacon",
+            "thyme",
+            "bay leaves",
+            "butter",
+            "flour",
+            "parsley"
+        ]
+    },
+    {
+        "id": 4,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Caesar Salad",
+        "description": "A fresh salad made with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+        "price": 9.99,
+        "rating": 4.3,
+        "ingredients": [
+            "romaine lettuce",
+            "croutons",
+            "Parmesan cheese",
+            "Caesar dressing",
+            "lemon juice",
+            "garlic",
+            "Dijon mustard",
+            "anchovies",
+            "olive oil",
+            "egg yolk"
+        ]
+    },
+    {
+        "id": 5,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Pad Thai",
+        "description": "A traditional Thai stir-fried noodle dish made with rice noodles, shrimp, peanuts, scrambled eggs, and bean sprouts.",
+        "price": 13.99,
+        "rating": 4.6,
+        "ingredients": [
+            "rice noodles",
+            "shrimp",
+            "eggs",
+            "bean sprouts",
+            "peanuts",
+            "green onions",
+            "garlic",
+            "fish sauce",
+            "tamarind paste",
+            "palm sugar",
+            "lime"
+        ]
+    },
+    {
+        "id": 6,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Tacos",
+        "description": "Mexican tacos made with corn tortillas, filled with a choice of meats, topped with fresh cilantro, onions, and lime.",
+        "price": 10.99,
+        "rating": 4.4,
+        "ingredients": [
+            "corn tortillas",
+            "beef",
+            "onions",
+            "cilantro",
+            "lime",
+            "salsa",
+            "cheese",
+            "avocado"
+        ]
+    },
+    {
+        "id": 7,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Sushi",
+        "description": "A traditional Japanese dish made with vinegared rice, raw fish, and various vegetables.",
+        "price": 20.99,
+        "rating": 4.9,
+        "ingredients": [
+            "sushi rice",
+            "nori",
+            "raw fish",
+            "cucumber",
+            "avocado",
+            "soy sauce",
+            "wasabi",
+            "pickled ginger"
+        ]
+    },
+    {
+        "id": 8,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Ratatouille",
+        "description": "A French Provençal stewed vegetable dish made with tomatoes, zucchini, eggplant, and bell peppers.",
+        "price": 11.99,
+        "rating": 4.7,
+        "ingredients": [
+            "tomatoes",
+            "zucchini",
+            "eggplant",
+            "bell peppers",
+            "onions",
+            "garlic",
+            "olive oil",
+            "thyme",
+            "basil"
+        ]
+    },
+    {
+        "id": 9,
+        "image": "https://themewagon.github.io/delicious/img/bg-img/r5.jpg",
+        "title": "Cheesecake",
+        "description": "A creamy dessert with a crust made from graham crackers, filled with a mixture of cream cheese, sugar, and eggs.",
+        "price": 8.99,
+        "rating": 4.6,
+        "ingredients": [
+            "cream cheese",
+            "sugar",
+            "eggs",
+            "vanilla extract",
+            "graham crackers",
+            "butter",
+            "sour cream"
+        ]
+    }
+]

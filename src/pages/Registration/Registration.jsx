@@ -4,10 +4,15 @@ import { FaGoogle } from "react-icons/fa6";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 import { FaGithub } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Registration = () => {
-    const { user, createUser, githubLogin } = useContext(AuthContext);
+    const { user, createUser, githubLogin, googleLogin } = useContext(AuthContext);
     const [passMatch, setPassMatch] = useState(true);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location?.state?.from?.pathname || "/";
 
     const handleRegistration = e => {
         e.preventDefault();
@@ -24,18 +29,32 @@ const Registration = () => {
             createUser(email, password)
                 .then((userCredential) => {
                     console.log(userCredential.user);
+                    navigate(from)
                 })
                 .catch(err => {
                     console.log(err.message);
                 })
         }
+
         console.log(email, password, confirmPassword);
+    }
+
+    const handleGoogleLogin = () =>{
+        googleLogin()
+        .then(result => {
+            console.log(result.user);
+            navigate(from)
+        })
+        .catch(err => {
+            console.log(err.message);
+        })
     }
 
     const handleGithubSignIn = () => {
         githubLogin()
         .then(result => {
             console.log(result.user);
+            navigate(from)
         })
         .catch(err => {
             console.log(err.message);
@@ -57,7 +76,7 @@ const Registration = () => {
                         {passMatch ? "" : <h5 className="absolute text-red-600">Password not match</h5>}
                     </div>
                     <button className='btn btn-primary w-full'>SIGN UP</button>
-                    <button className='btn w-full flex items-center justify-center space-x-2'>
+                    <button onClick={handleGoogleLogin} className='btn w-full flex items-center justify-center space-x-2'>
                         <FaGoogle />
                         <span>Login with Google</span>
                     </button>

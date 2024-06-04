@@ -1,0 +1,68 @@
+{
+  "shoes":[
+    {
+      "id": "001",
+      "name": "Nike Air Max 270",
+      "image": "https://example.com/images/nike_air_max_270.jpg",
+      "price": 150.00,
+      "short_description": "Comfortable sneakers with Max Air cushioning for all-day wear."
+    },
+    {
+      "id": "002",
+      "name": "Adidas Ultraboost 21",
+      "image": "https://example.com/images/adidas_ultraboost_21.jpg",
+      "price": 180.00,
+      "short_description": "High-performance running shoes with responsive Boost cushioning."
+    },
+    {
+      "id": "003",
+      "name": "Puma RS-X3",
+      "image": "https://example.com/images/puma_rs_x3.jpg",
+      "price": 110.00,
+      "short_description": "Retro-inspired sneakers with bold color accents and cushioning."
+    },
+    {
+      "id": "004",
+      "name": "Under Armour HOVR Phantom 2",
+      "image": "https://example.com/images/ua_hovr_phantom_2.jpg",
+      "price": 140.00,
+      "short_description": "Sleek running shoes with HOVR cushioning and a snug fit."
+    },
+    {
+      "id": "005",
+      "name": "New Balance 990v5",
+      "image": "https://example.com/images/nb_990v5.jpg",
+      "price": 175.00,
+      "short_description": "Classic running shoes with premium materials and cushioning."
+    },
+    {
+      "id": "006",
+      "name": "ASICS Gel-Kayano 27",
+      "image": "https://example.com/images/asics_gel_kayano_27.jpg",
+      "price": 160.00,
+      "short_description": "Stability running shoes with Gel cushioning for maximum comfort."
+    },
+    {
+      "id": "007",
+      "name": "Reebok Nano X1",
+      "image": "https://example.com/images/reebok_nano_x1.jpg",
+      "price": 130.00,
+      "short_description": "Versatile training shoes designed for high-intensity workouts."
+    },
+    {
+      "id": "008",
+      "name": "Brooks Ghost 13",
+      "image": "https://example.com/images/brooks_ghost_13.jpg",
+      "price": 130.00,
+      "short_description": "Soft and smooth running shoes ideal for road running."
+    },
+    {
+      "id": "009",
+      "name": "Saucony Endorphin Speed",
+      "image": "https://example.com/images/saucony_endorphin_speed.jpg",
+      "price": 160.00,
+      "short_description": "Lightweight racing shoes with advanced cushioning technology."
+    }
+  ]
+  
+}

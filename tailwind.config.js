@@ -14,7 +14,7 @@ export default {
     themes: [
       {
         mytheme: {
-          "primary": "#004F57", // Set your custom primary color here
+          "primary": "#f36135", // Set your custom primary color here
         },
       },
     ],
