@@ -4,7 +4,7 @@ import SingleCard from '../../../components/LoadingSpinner/SingleCard';
 const Recipes = () => {
     const [recipes, setRecipes] = useState([])
     useEffect(() => {
-        fetch('https://tanim-s-kitchen-server.vercel.app/recipes')
+        fetch('http://localhost:3000/recipes')
         .then(res => res.json())
         .then(data => setRecipes(data))
     }, [])

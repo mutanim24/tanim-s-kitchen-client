@@ -8,6 +8,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import DashboardLayout from "../MainLayout/DashboardLayout";
 import PrivateRoute from "./PrivateRoute";
 import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
+import AddedRecipes from "../Dashboard/AddedRecipes/AddedRecipes";
 
  const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
         {
             path: "/",
             element: <Home></Home>,
-            // loader: () => fetch("https://tanim-s-kitchen-server.vercel.app/shoes")
+            // loader: () => fetch("http://localhost:3000/shoes")
         },
         {
             path: "/about",
@@ -26,7 +27,7 @@ import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
         {
           path: 'recipe/:id',
           element: <SingleRecipePage></SingleRecipePage>,
-          loader: ({params}) => fetch(`https://tanim-s-kitchen-server.vercel.app/recipe/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:3000/recipe/${params.id}`)
         },
         {
           path: '/login',
@@ -43,9 +44,10 @@ import SingleRecipePage from "../pages/SingleRecipePage/SingleRecipePage";
       path:'dashboard',
       element: <DashboardLayout></DashboardLayout>,
       children: [
+        
         {
           path: '',
-          element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+          element: <PrivateRoute><AddedRecipes></AddedRecipes></PrivateRoute>
         }
       ]
     }
