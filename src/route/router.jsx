@@ -48,6 +48,11 @@ import AddedRecipes from "../Dashboard/AddedRecipes/AddedRecipes";
         {
           path: '',
           element: <PrivateRoute><AddedRecipes></AddedRecipes></PrivateRoute>
+        },
+        {
+          path: 'update/:id',
+          element: <PrivateRoute><AddedRecipes></AddedRecipes></PrivateRoute>,
+          loader: ({params}) => {fetch(`http://localhost:3000/`)}
         }
       ]
     }
